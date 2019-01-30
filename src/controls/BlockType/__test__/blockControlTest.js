@@ -19,41 +19,35 @@ describe('Block test suite', () => {
   const editorState = EditorState.createWithContent(contentState);
 
   it('should have a div at root when rendered', () => {
-    const block = mount(
-      <Block
-        onChange={() => {}}
-        editorState={editorState}
-        config={{ ...defaultToolbar.blockType, inDropdown: false }}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    );
+    const block = mount(<Block
+      onChange={() => {}}
+      editorState={editorState}
+      config={{ ...defaultToolbar.blockType, inDropdown: false }}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />);
     expect(block.html().startsWith('<div')).to.equal(true);
   });
 
   it('should have a dropdown child component defined', () => {
-    const block = mount(
-      <Block
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.blockType}
-        modalHandler={new ModalHandler()}
-        translations={localeTranslations.en}
-      />,
-    );
+    const block = mount(<Block
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.blockType}
+      modalHandler={new ModalHandler()}
+      translations={localeTranslations.en}
+    />);
     expect(block.find('Dropdown').length).to.equal(1);
   });
 
   it('should have 9 child elements when inDropdown is false', () => {
-    const block = mount(
-      <Block
-        onChange={() => {}}
-        editorState={editorState}
-        config={{ ...defaultToolbar.blockType, inDropdown: false }}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    );
+    const block = mount(<Block
+      onChange={() => {}}
+      editorState={editorState}
+      config={{ ...defaultToolbar.blockType, inDropdown: false }}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />);
     expect(block.find('Option').length).to.equal(9);
   });
 });

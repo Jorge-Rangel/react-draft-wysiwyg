@@ -222,7 +222,8 @@ class LayoutComponent extends Component {
                 onDrop={this.onImageDrop}
                 className={classNames(
                   'rdw-image-modal-upload-option',
-                  { 'rdw-image-modal-upload-option-highlighted': dragEnter })}
+                  { 'rdw-image-modal-upload-option-highlighted': dragEnter },
+)}
               >
                 <label
                   htmlFor="file"

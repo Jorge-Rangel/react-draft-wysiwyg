@@ -36,7 +36,9 @@ export default class History extends Component {
       currentState: { undoDisabled, redoDisabled },
       translations,
     } = this.props;
-    const { options, undo, redo, className, dropdownClassName, title } = config;
+    const {
+      options, undo, redo, className, dropdownClassName, title,
+    } = config;
     return (
       <Dropdown
         className={classNames('rdw-history-dropdown', className)}
@@ -82,7 +84,9 @@ export default class History extends Component {
 
   renderInFlatList(): Object {
     const {
-      config: { options, undo, redo, className },
+      config: {
+        options, undo, redo, className,
+      },
       currentState: { undoDisabled, redoDisabled },
       translations,
     } = this.props;

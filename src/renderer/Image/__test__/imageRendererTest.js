@@ -26,11 +26,7 @@ describe('ImageRenderer test suite', () => {
       isReadOnly: () => false,
       isImageAlignmentEnabled: () => true,
     });
-    expect(
-      mount(
-        <Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />,
-      ).childAt(0).type(),
-    )
+    expect(mount(<Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />).childAt(0).type())
       .to.equal('span');
   });
 
@@ -39,9 +35,7 @@ describe('ImageRenderer test suite', () => {
       isReadOnly: () => false,
       isImageAlignmentEnabled: () => true,
     });
-    const control = shallow(
-      <Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />,
-    );
+    const control = shallow(<Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />);
     assert.isNotTrue(control.state().hovered);
   });
 
@@ -50,9 +44,7 @@ describe('ImageRenderer test suite', () => {
       isReadOnly: () => false,
       isImageAlignmentEnabled: () => true,
     });
-    const control = shallow(
-      <Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />,
-    );
+    const control = shallow(<Image block={getAllBlocks(newEditorState).get(1)} contentState={contentState} />);
     expect(control.children().length).to.equal(1);
   });
 });

@@ -58,7 +58,9 @@ class Link extends Component {
     const { config: { beforeAddLink } } = this.props;
 
     if (action === 'link') {
-      const link = beforeAddLink({action, title, target, targetOption});
+      const link = beforeAddLink({
+        action, title, target, targetOption,
+      });
       const linkifiedTarget = links && links[0] ? links[0].url : target;
       this.addLink(title, linkifiedTarget, targetOption);
     } else {

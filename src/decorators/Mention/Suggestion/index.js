@@ -36,7 +36,9 @@ class Suggestion {
 
   findSuggestionEntities = (contentBlock, callback) => {
     if (this.config.getEditorState()) {
-      const { separator, trigger, getSuggestions, getEditorState } = this.config;
+      const {
+        separator, trigger, getSuggestions, getEditorState,
+      } = this.config;
       const selection = getEditorState().getSelection();
       if (selection.get('anchorKey') === contentBlock.get('key') &&
         selection.get('anchorKey') === selection.get('focusKey')) {

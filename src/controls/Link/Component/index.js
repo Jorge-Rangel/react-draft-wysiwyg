@@ -154,7 +154,9 @@ class LayoutComponent extends Component {
 
   renderInFlatList(): Object {
     const {
-      config: { options, link, unlink, className },
+      config: {
+        options, link, unlink, className,
+      },
       currentState,
       expanded,
       translations,
@@ -203,7 +205,9 @@ class LayoutComponent extends Component {
       currentState,
       translations,
     } = this.props;
-    const { options, link, unlink, className, dropdownClassName, title } = config;
+    const {
+      options, link, unlink, className, dropdownClassName, title,
+    } = config;
     const { showModal } = this.state;
     return (
       <div

@@ -27,5 +27,5 @@ module.exports = {
   zh_tw,
   pl,
   es,
-  ja
+  ja,
 };

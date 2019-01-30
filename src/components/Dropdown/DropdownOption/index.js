@@ -26,11 +26,13 @@ export default class DropDownOption extends Component {
   static defaultProps = {
     activeClassName: '',
     disabledClassName: '',
-    highlightedClassName: ''
+    highlightedClassName: '',
   }
 
   onClick: Function = (event): void => {
-    const { onSelect, onClick, value, disabled } = this.props;
+    const {
+      onSelect, onClick, value, disabled,
+    } = this.props;
     if (!disabled) {
       if (onSelect) {
         onSelect(value);
@@ -69,10 +71,12 @@ export default class DropDownOption extends Component {
         className={classNames(
           'rdw-dropdownoption-default',
           className,
-          { [`rdw-dropdownoption-active ${activeClassName}`]: active,
+          {
+ [`rdw-dropdownoption-active ${activeClassName}`]: active,
             [`rdw-dropdownoption-highlighted ${highlightedClassName}`]: highlighted,
             [`rdw-dropdownoption-disabled ${disabledClassName}`]: disabled,
-          })
+          },
+)
         }
         onMouseEnter={this.setHighlighted}
         onMouseLeave={this.resetHighlighted}

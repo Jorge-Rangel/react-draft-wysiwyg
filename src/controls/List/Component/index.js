@@ -48,9 +48,11 @@ export default class LayoutComponent extends Component {
       currentState: { listType },
       translations,
       indentDisabled,
-      outdentDisabled
+      outdentDisabled,
     } = this.props;
-    const { options, unordered, ordered, indent, outdent, className } = config;
+    const {
+      options, unordered, ordered, indent, outdent, className,
+    } = config;
     return (
       <div className={classNames('rdw-list-wrapper', className)} aria-label="rdw-list-control">
         {options.indexOf('unordered') >= 0 && <Option
@@ -114,7 +116,9 @@ export default class LayoutComponent extends Component {
       currentState: { listType },
       translations,
     } = this.props;
-    const { options, className, dropdownClassName, title } = config;
+    const {
+      options, className, dropdownClassName, title,
+    } = config;
     return (
       <Dropdown
         className={classNames('rdw-list-dropdown', className)}

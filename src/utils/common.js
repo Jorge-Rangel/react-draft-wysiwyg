@@ -30,7 +30,7 @@ export function hasProperty(obj: Object, property: string) {
 * The function returns true if the string passed to it has no content.
 */
 export function isEmptyString(str: string): boolean {
-  return !str || !str.trim()
+  return !str || !str.trim();
 }
 
 /**

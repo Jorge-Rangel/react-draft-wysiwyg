@@ -29,7 +29,9 @@ export default class Option extends Component {
   };
 
   render() {
-    const { children, className, activeClassName, active, disabled, title } = this.props;
+    const {
+      children, className, activeClassName, active, disabled, title,
+    } = this.props;
     return (
       <div
         className={classNames(

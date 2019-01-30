@@ -37,7 +37,9 @@ export default class LayoutComponent extends Component {
 
   render() {
     const {
-      config: { icon, className, dropdownClassName, options, title },
+      config: {
+        icon, className, dropdownClassName, options, title,
+      },
       onChange,
       expanded,
       doCollapse,
@@ -75,8 +77,7 @@ export default class LayoutComponent extends Component {
                 key={index}
               >
                 {size}
-              </DropdownOption>),
-            )
+              </DropdownOption>))
           }
         </Dropdown>
       </div>

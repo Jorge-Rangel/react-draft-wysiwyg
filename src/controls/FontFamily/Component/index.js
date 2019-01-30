@@ -37,7 +37,9 @@ class LayoutComponent extends Component {
   render() {
     const { defaultFontFamily } = this.state;
     const {
-      config: { className, dropdownClassName, options, title },
+      config: {
+        className, dropdownClassName, options, title,
+      },
       translations,
       onChange,
       expanded,

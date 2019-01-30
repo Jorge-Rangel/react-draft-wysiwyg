@@ -94,8 +94,7 @@ export default class Dropdown extends Component {
           >
             {
               React.Children.map(options, (option, index) => {
-                const temp = option && React.cloneElement(
-                  option, {
+                const temp = option && React.cloneElement(option, {
                     onSelect: this.onChange,
                     highlighted: highlighted === index,
                     setHighlighted: this.setHighlighted,

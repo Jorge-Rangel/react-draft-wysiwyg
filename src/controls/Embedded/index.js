@@ -53,8 +53,7 @@ class Embedded extends Component {
   };
 
   addEmbeddedLink: Function = (embeddedLink, height, width): void => {
-    
-    const { editorState, onChange, config: { embedCallback} } = this.props;
+    const { editorState, onChange, config: { embedCallback } } = this.props;
     const src = embedCallback ? embedCallback(embeddedLink) : embeddedLink;
     const entityKey = editorState
       .getCurrentContent()

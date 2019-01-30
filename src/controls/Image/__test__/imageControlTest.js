@@ -20,40 +20,34 @@ describe('ImageControl test suite', () => {
   const editorState = EditorState.createWithContent(contentState);
 
   it('should have a div when rendered', () => {
-    expect(mount(
-      <ImageControl
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.image}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    ).html().startsWith('<div')).to.equal(true);
+    expect(mount(<ImageControl
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.image}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />).html().startsWith('<div')).to.equal(true);
   });
 
   it('should have 1 child element by default', () => {
-    const control = mount(
-      <ImageControl
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.image}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    );
+    const control = mount(<ImageControl
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.image}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />);
     expect(control.children().length).to.equal(1);
   });
 
   it.skip('should set signalExpanded to true when option is clicked', () => {
-    const control = mount(
-      <ImageControl
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.image}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    );
+    const control = mount(<ImageControl
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.image}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />);
     const imageControl = control.find('ImageControl');
     assert.isNotTrue(imageControl.node.signalExpanded);
     control.find('Option').simulate('click');

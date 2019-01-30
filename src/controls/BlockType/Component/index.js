@@ -60,8 +60,7 @@ class LayoutComponent extends Component {
               onClick={onChange}
             >
               {block.displayName}
-            </Option>),
-          )
+            </Option>))
         }
       </div>
     );

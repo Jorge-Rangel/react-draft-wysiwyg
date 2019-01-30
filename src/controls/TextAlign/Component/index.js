@@ -23,7 +23,9 @@ export default class TextAlign extends Component {
 
   renderInFlatList(): Object {
     const {
-      config: { options, left, center, right, justify, className },
+      config: {
+        options, left, center, right, justify, className,
+      },
       onChange,
       currentState: { textAlignment },
       translations,
@@ -93,7 +95,9 @@ export default class TextAlign extends Component {
       onChange,
       translations,
     } = this.props;
-    const { options, left, center, right, justify, className, dropdownClassName, title } = config;
+    const {
+      options, left, center, right, justify, className, dropdownClassName, title,
+    } = config;
     return (
       <Dropdown
         className={classNames('rdw-text-align-dropdown', className)}

@@ -21,27 +21,23 @@ describe('HistoryControl test suite', () => {
   const editorState = EditorState.createWithContent(contentState);
 
   it('should have a div when rendered', () => {
-    expect(mount(
-      <HistoryControl
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.history}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    ).html().startsWith('<div')).to.equal(true);
+    expect(mount(<HistoryControl
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.history}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />).html().startsWith('<div')).to.equal(true);
   });
 
   it('should have 2 child elements', () => {
-    const control = mount(
-      <HistoryControl
-        onChange={() => {}}
-        editorState={editorState}
-        config={defaultToolbar.history}
-        translations={localeTranslations.en}
-        modalHandler={new ModalHandler()}
-      />,
-    );
+    const control = mount(<HistoryControl
+      onChange={() => {}}
+      editorState={editorState}
+      config={defaultToolbar.history}
+      translations={localeTranslations.en}
+      modalHandler={new ModalHandler()}
+    />);
     expect(control.find(Option).length).to.equal(2);
   });
 });
